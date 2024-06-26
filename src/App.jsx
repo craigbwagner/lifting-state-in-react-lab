@@ -24,6 +24,10 @@ function addToBurger(ingredient) {
 	console.log('Hello World');
 }
 
+function removeFromBurger(ingredient) {
+	console.log('Hello world');
+}
+
 const App = () => {
 	const [stack, setStack] = useState([]);
 	return (
@@ -34,7 +38,10 @@ const App = () => {
 					availableIngredients={availableIngredients}
 					addToBurger={addToBurger}
 				/>
-				<BurgerStack stack={stack} />
+				<BurgerStack
+					stack={stack}
+					removeFromBurger={removeFromBurger}
+				/>
 			</section>
 		</main>
 	);
