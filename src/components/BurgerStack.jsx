@@ -5,6 +5,7 @@ function BurgerStack(props) {
 				<li
 					key={ingredient.name + idx}
 					style={{ backgroundColor: ingredient.color }}
+					onClick={props.removeFromBurger}
 				>
 					{ingredient.name}
 				</li>
