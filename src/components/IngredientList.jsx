@@ -1,5 +1,5 @@
-const IngredientList = (props) => {
-  return <ul>// map through props.ingredients</ul>;
-};
+function IngredientList(props) {
+	return <ul>// map through props.ingredients</ul>;
+}
 
 export default IngredientList;

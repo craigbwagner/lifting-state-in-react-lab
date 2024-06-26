@@ -1,5 +1,5 @@
-const BurgerStack = (props) => {
-  return <ul>// map through props.ingredients</ul>;
-};
+function BurgerStack(props) {
+	return <ul>// map through props.ingredients</ul>;
+}
 
 export default BurgerStack;
