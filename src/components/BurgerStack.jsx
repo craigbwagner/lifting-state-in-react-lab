@@ -1,11 +1,11 @@
-function BurgerStack(props) {
+function BurgerStack({ stack, removeFromBurger }) {
 	return (
 		<ul>
-			{props.stack.map((ingredient, idx) => (
+			{stack.map((ingredient) => (
 				<li
-					key={ingredient.name + idx}
+					key={ingredient.key}
 					style={{ backgroundColor: ingredient.color }}
-					onClick={props.removeFromBurger}
+					onClick={() => removeFromBurger(ingredient)}
 				>
 					{ingredient.name}
 				</li>

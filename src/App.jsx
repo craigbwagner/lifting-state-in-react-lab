@@ -20,16 +20,20 @@ export const availableIngredients = [
 	{ name: 'Swiss Cheese', color: '#F1E1A8' },
 ];
 
-function addToBurger(ingredient) {
-	console.log('Hello World');
-}
-
-function removeFromBurger(ingredient) {
-	console.log('Hello world');
-}
-
 const App = () => {
 	const [stack, setStack] = useState([]);
+
+	function addToBurger(ingredient) {
+		ingredient.key = stack.length + 1;
+		setStack([...stack, ingredient]);
+	}
+
+	function removeFromBurger(selectedIngredient) {
+		console.log(selectedIngredient.key);
+		const newStack = stack.filter((stackIngredient) => stackIngredient.key !== selectedIngredient.key);
+		setStack(newStack);
+	}
+
 	return (
 		<main>
 			<h1>Burger Stacker</h1>

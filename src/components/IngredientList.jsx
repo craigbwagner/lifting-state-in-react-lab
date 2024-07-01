@@ -1,17 +1,17 @@
-function IngredientList(props) {
-  return (
+function IngredientList({ availableIngredients, addToBurger }) {
+	return (
 		<ul>
-			{props.availableIngredients.map((ingredient) => (
+			{availableIngredients.map((ingredient, idx) => (
 				<li
-					key={ingredient.name}
+					key={ingredient.name + idx}
 					style={{ backgroundColor: ingredient.color }}
-					onClick={props.addToBurger}
+					onClick={() => addToBurger(ingredient)}
 				>
 					{ingredient.name}
 				</li>
 			))}
 		</ul>
-  );
+	);
 }
 
 export default IngredientList;
